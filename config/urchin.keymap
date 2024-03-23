@@ -95,10 +95,10 @@
 
         default_layer {
             bindings = <
-&mt LS(LGUI) Q    &kp W          &kp E          &kp R            &kp T        &kp Y       &kp U            &kp I          &kp O          &kp P
-&bhm LCTRL A      &bhm LALT S    &bhm LGUI D    &bhm LSHIFT F    &kp G        &kp H       &bhm RSHIFT J    &bhm RGUI K    &bhm RALT L    &kp SEMI
-&bhm LSHIFT Z     &cut           &copy          &paste           &kp B        &kp N       &kp M            &kp COMMA      &kp DOT        &bhm RSHIFT FSLH
-                                                &lt 1 ESC        &kp SPACE    &kp BSPC    &lt 2 ENTER
+&none  &none  &none  &none      &none        &none     &none        &none  &none     &none
+&none  &kp Q  &kp L  &kp G      &kp D        &kp H     &kp U        &kp O  &kp SEMI  &none
+&none  &kp I  &kp R  &kp S      &kp T        &kp N     &kp E        &kp A  &kp C     &none
+                     &lt 1 ESC  &kp SPACE    &kp BSPC  &lt 2 ENTER
             >;
         };
 
