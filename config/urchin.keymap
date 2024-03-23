@@ -102,30 +102,31 @@
             >;
         };
 
+
         right_layer {
             bindings = <
-&dt1             &dt2             &dt3            &dt4            &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-&kp C_BRI_DEC    &kp C_BRI_INC    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE    &kp LARW    &kp DARW    &kp UARW    &kp RARW    &kp TAB
-&mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kp LALT
-                                                  &trans          &trans        &trans      &trans
+&none  &none              &none  &none   &none     &none   &none      &none  &none      &none
+&none  &kp SINGLE_QUOTE   &kp V  &kp W   &kp M     &kp F   &kp COMMA  &kp Z  &kp SLASH  &none
+&none  &kp DOUBLE_QUOTES  &kp J  &kp P   &kp K     &kp B   &kp DOT    &kp X  &kp Y      &none
+                                 &trans  &trans    &trans  &trans
             >;
         };
 
         left_layer {
             bindings = <
-&kp EXCL     &kp AT       &kp HASH    &kp DLLR    &kp PRCNT      &kp CARET    &kp AMPS     &kp ASTRK    &kp LPAR    &kp RPAR
-&kp TILDE    &kp GRAVE    &kp SQT     &kp DQT     &caps_word     &kp MINUS    &kp EQUAL    &kp LBKT     &kp RBKT    &kp PIPE
-&kp ESC      &kp ENTER    &trans      &trans      &key_repeat    &kp UNDER    &kp PLUS     &kp LBRC     &kp RBRC    &kp BACKSLASH
-                                      &trans      &trans         &trans       &trans
+&kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR
+&kp TILDE  &kp GRAVE  &kp SQT   &kp DQT   &caps_word    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
+&kp ESC    &kp ENTER  &trans    &trans    &trans        &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
+                                &trans    &trans        &trans     &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset     &kp N1    &trans    &trans        &bt BT_SEL 0    &trans    &trans    &trans    &trans    &sys_reset
-&bootloader    &trans    &trans    &trans        &bt BT_SEL 1    &trans    &trans    &trans    &trans    &bootloader
-&trans         &trans    &trans    &bt BT_CLR    &bt BT_SEL 2    &trans    &trans    &trans    &trans    &trans
-                                   &trans        &trans          &trans    &trans
+&sys_reset   &kp N1  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans  &trans
             >;
         };
     };
