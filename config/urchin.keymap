@@ -15,13 +15,18 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
         combo_sl_1 {
             timeout-ms = <50>;
             key-positions = <13 14>;
             bindings = <&sl 1>;
+        };
+        combo_sl_2 {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&sl 2>;
         };
     };
 
