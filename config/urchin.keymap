@@ -130,7 +130,9 @@
             bindings = <
 &dt1             &dt2             &dt3            &dt4            &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
 &kp C_BRI_DEC    &kp C_BRI_INC    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE    &kp LARW    &kp DARW    &kp UARW    &kp RARW    &kp TAB
-&mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kp LALT
+&mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kt LALT
+
+
                                                   &trans          &trans        &trans      &trans
             >;
         };
