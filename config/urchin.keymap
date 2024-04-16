@@ -10,8 +10,21 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+/* Layers */
+#define DEFAULT 0
+#define NUM 1
+#define SYM 2
+#define SETTING 3
+#define ALPHA1 4
+#define ALPHA2 5
+
 / {
     combos {
+        // 0  1  2  3  4  ** 5  6  7  8  9
+        // 10 11 12 13 14 ** 15 16 17 18 19
+        // 20 21 22 23 24 ** 25 26 27 28 29
+        //          30 31 ** 32 33
+
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
@@ -30,8 +43,18 @@
         };
         combo_repeat_key {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <12 13>;
             bindings = <&key_repeat>;
+        };
+        combo_nuke_line {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            bindings = <&kp LG(BSPC)>;
+        };
+        combo_nuke_word {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            bindings = <&kp LA(BSPC)>;
         };
     };
 
@@ -117,17 +140,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // 0  1  2  3  4  ** 5  6  7  8  9
-        // 10 11 12 13 14 ** 15 16 17 18 19
-        // 20 21 22 23 24 ** 25 26 27 28 29
-        //          30 31 ** 32 33
-
         default_layer {
             bindings = <
 &mt LS(LGUI) Q    &kp W          &kp E          &kp R            &kp T        &kp Y       &kp U            &kp I          &kp O          &kp P
 &bhm LCTRL A      &bhm LALT S    &bhm LGUI D    &bhm LSHIFT F    &kp G        &kp H       &bhm RSHIFT J    &bhm RGUI K    &bhm RALT L    &kp SEMI
 &bhm LSHIFT Z     &cut           &copy          &paste           &kp B        &kp N       &kp M            &kp COMMA      &kp DOT        &bhm RSHIFT FSLH
-                                                &lt 1 ESC        &kp SPACE    &kp BSPC    &lt 2 ENTER
+                                                &lt NUM ESC        &kp SPACE    &kp BSPC    &lt SYM ENTER
             >;
         };
 
@@ -135,7 +153,7 @@
             bindings = <
 &dt1             &dt2             &dt3            &dt4            &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
 &kp C_BRI_DEC    &kp C_BRI_INC    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE    &kp LARW    &kp DARW    &kp UARW    &kp RARW    &kp TAB
-&mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kt LALT
+&mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kp LALT
 
 
                                                   &trans          &trans        &trans      &trans
@@ -153,10 +171,28 @@
 
         tri_layer {
             bindings = <
-&sys_reset     &kp N1    &trans    &trans        &bt BT_SEL 0    &trans    &trans    &trans    &trans    &sys_reset
+&sys_reset     &kp N1    &trans    &trans        &bt BT_SEL 0    &to ALPHA1    &trans    &trans    &trans    &sys_reset
 &bootloader    &trans    &trans    &trans        &bt BT_SEL 1    &trans    &trans    &trans    &trans    &bootloader
 &trans         &trans    &trans    &bt BT_CLR    &bt BT_SEL 2    &trans    &trans    &trans    &trans    &trans
                                    &trans        &trans          &trans    &trans
+            >;
+        };
+
+        alpha_1 {
+            bindings = <
+&none        &none        &none        &none        &none        &none        &none        &none        &none        &none
+&key_repeat    &kp L     &kp G     &kp D      &none            &none    &kp H     &kp U     &kp O     &kp SEMI
+&bhm LSHIFT I    &kp S      &kp R    &kp T    &none          &none    &kp N      &kp E    &kp A      &bhm RSHIFT C
+                             &lt 5 ESC     &kp SPACE                 &kp BSPC    &kp ENTER
+            >;
+        };
+
+        alpha_2 {
+            bindings = <
+&none        &none        &none        &none        &none            &to DEFAULT     &none        &none        &none        &none
+&none        &kp V        &kp W        &kp M        &none            &none    &kp F        &kp SQT      &kp Z        &trans
+&bhm LSHIFT Q    &kp J        &kp P        &kp K    &none            &none    &kp B        &kp DOT      &kp X       &bhm RSHIFT Y
+                                &trans    &trans      &trans      &trans
             >;
         };
     };
