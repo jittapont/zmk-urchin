@@ -180,10 +180,10 @@
 
         alpha_1 {
             bindings = <
-&none        &none        &none        &none        &none        &none        &none        &none        &none        &none
+&ESC        &none        &none        &none        &none        &none        &none        &none        &none        &none
 &key_repeat    &kp L     &kp G     &kp D      &none            &none    &kp H     &kp U     &kp O     &kp SEMI
 &bhm LSHIFT I    &kp S      &kp R    &kp T    &none          &none    &kp N      &kp E    &kp A      &bhm RSHIFT C
-                             &lt 5 ESC     &kp SPACE                 &kp BSPC    &kp ENTER
+                             &lt ALPHA2     &kp SPACE                 &kp BSPC    &kp ENTER
             >;
         };
 
@@ -192,7 +192,7 @@
 &none        &none        &none        &none        &none            &to DEFAULT     &none        &none        &none        &none
 &none        &kp V        &kp W        &kp M        &none            &none    &kp F        &kp SQT      &kp Z        &trans
 &bhm LSHIFT Q    &kp J        &kp P        &kp K    &none            &none    &kp B        &kp DOT      &kp X       &bhm RSHIFT Y
-                                &trans    &trans      &trans      &trans
+                                &trans    &trans   &trans      &trans
             >;
         };
     };
