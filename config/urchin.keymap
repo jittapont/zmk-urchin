@@ -180,7 +180,7 @@
 
         alpha_1 {
             bindings = <
-&ESC        &none        &none        &none        &none        &none        &none        &none        &none        &none
+&kp ESC        &none        &none        &none        &none        &none        &none        &none        &none        &none
 &key_repeat    &kp L     &kp G     &kp D      &none            &none    &kp H     &kp U     &kp O     &kp SEMI
 &bhm LSHIFT I    &kp S      &kp R    &kp T    &none          &none    &kp N      &kp E    &kp A      &bhm RSHIFT C
                              &lt ALPHA2     &kp SPACE                 &kp BSPC    &kp ENTER
