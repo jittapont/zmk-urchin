@@ -31,15 +31,15 @@
             key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
-        combo_sl_1 {
+        combo_sl_0 {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            bindings = <&sl 1>;
+            bindings = <&to DEFAULT>;
         };
-        combo_sl_2 {
+        combo_sl_1 {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&sl 2>;
+            bindings = <&to NUM>;
         };
         combo_repeat_key {
             timeout-ms = <50>;
@@ -152,10 +152,8 @@
         right_layer {
             bindings = <
 &dt1             &dt2             &dt3            &dt4            &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-&kp C_BRI_DEC    &kp C_BRI_INC    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE    &kp LARW    &kp DARW    &kp UARW    &kp RARW    &kp TAB
+&kp LSHIFT       &kp LGUI        &kp LALT        &trans          &trans        &kp LARW    &kp DARW    &kp UARW    &kp RARW    &kp TAB
 &mkp MB5         &mkp MB4         &mkp MB3        &mkp MB2        &mkp MB1      &trans      &trans      &trans      &trans      &kp LALT
-
-
                                                   &trans          &trans        &trans      &trans
             >;
         };
@@ -171,9 +169,9 @@
 
         tri_layer {
             bindings = <
-&sys_reset     &kp N1    &trans    &trans        &bt BT_SEL 0    &to ALPHA1    &trans    &trans    &trans    &sys_reset
-&bootloader    &trans    &trans    &trans        &bt BT_SEL 1    &trans    &trans    &trans    &trans    &bootloader
-&trans         &trans    &trans    &bt BT_CLR    &bt BT_SEL 2    &trans    &trans    &trans    &trans    &trans
+&sys_reset         &bt BT_CLR    &bt BT_SEL 0        &bt BT_SEL 1  &bt BT_SEL 2    &to ALPHA1    &trans    &trans    &bootloader    &sys_reset
+&kp C_BRI_DEC       &kp C_BRI_INC    &kp C_VOL_DN    &kp C_VOL_UP    &kc C_MUTE    &trans    &trans    &trans    &trans     &trans
+&trans         &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans
                                    &trans        &trans          &trans    &trans
             >;
         };
